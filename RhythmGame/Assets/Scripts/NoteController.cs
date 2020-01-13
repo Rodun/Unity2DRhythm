@@ -29,6 +29,7 @@ public class NoteController : MonoBehaviour
 
     void Start()
     {
+        /*
         notes.Add(new Note(1, 1));
         notes.Add(new Note(2, 2));
         notes.Add(new Note(3, 3));
@@ -44,6 +45,7 @@ public class NoteController : MonoBehaviour
         {
             StartCoroutine(AwaitMakeNote(notes[i]));
         }
+        */
     }
 
     // Update is called once per frame
