@@ -11,9 +11,10 @@ public class ObjectPooler : MonoBehaviour
 
     void Start()
     {
+        poolsOfNotes = new List<List<GameObject>>();
         for(int i = 0; i < Notes.Count; ++i)
         {
-            poolsOfNotes = new List<List<GameObject>>();
+            poolsOfNotes.Add(new List<GameObject>());
             for (int n = 0; n < noteCount; ++n)
             {
                 GameObject obj = Instantiate(Notes[i]);
