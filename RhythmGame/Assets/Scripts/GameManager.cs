@@ -41,8 +41,24 @@ public class GameManager : MonoBehaviour
     public GameObject[] trails;
     private SpriteRenderer[] trailSpriteRenderers;
 
+    // Audio member
+    private AudioSource audioSource;
+    private string music = "Drops of H20";
+
+    // Start Music Function
+    void MusicStart()
+    {
+        // 리소스에서 비트(beat) 음악 파일을 불러와 재생합니다.
+        AudioClip audioClip = Resources.Load<AudioClip>("Beats/" + music);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
     void Start()
     {
+        Invoke("MusicStart", 2); // 게임 시작후 2초뒤에 음악이 실행되도록 한다.
+
         judgementSpriteRenderer = judgeUI.GetComponent<Image>();
         judgementSpriteAnimator = judgeUI.GetComponent<Animator>();
         scoreText = scoreUI.GetComponent<Text>();
