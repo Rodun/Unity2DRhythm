@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     // Audio member
     private AudioSource audioSource;
-    private string music = "Drops of H20";
+    public string music = "1";
 
     // Start Music Function
     void MusicStart()
