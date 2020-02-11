@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
     private AudioSource audioSource;
     public string music = "1";
 
+    public bool autoPerfect; // 자동 만점 기능
+
     // Start Music Function
     void MusicStart()
     {

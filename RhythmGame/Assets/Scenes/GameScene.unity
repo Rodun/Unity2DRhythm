@@ -6774,6 +6774,7 @@ MonoBehaviour:
   - {fileID: 1186053765}
   - {fileID: 722841445}
   music: 1
+  autoPerfect: 1
 --- !u!4 &1134907861
 Transform:
   m_ObjectHideFlags: 0
