@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
 
     // Audio member
     private AudioSource audioSource;
-    public string music = "1";
 
     public bool autoPerfect; // 자동 만점 기능
 
@@ -52,7 +51,7 @@ public class GameManager : MonoBehaviour
     void MusicStart()
     {
         // 리소스에서 비트(beat) 음악 파일을 불러와 재생합니다.
-        AudioClip audioClip = Resources.Load<AudioClip>("Beats/" + music);
+        AudioClip audioClip = Resources.Load<AudioClip>("Beats/" + PlayerInformation.selectedMusic);
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
         audioSource.Play();
