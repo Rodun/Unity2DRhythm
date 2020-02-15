@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 using UnityEngine.SceneManagement;
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 
 public class GameResultManager : MonoBehaviour
 {
@@ -12,6 +15,10 @@ public class GameResultManager : MonoBehaviour
     public Text scoreUI;
     public Text maxComboUI;
     public Image RankUI;
+
+    public Text Rank1UI;
+    public Text Rank2UI;
+    public Text Rank3UI;
 
     void Start()
     {
@@ -42,6 +49,56 @@ public class GameResultManager : MonoBehaviour
             RankUI.sprite = Resources.Load<Sprite>("Sprites/Rank B");
         else
             RankUI.sprite = Resources.Load<Sprite>("Sprites/Rank C");
+
+        Rank1UI.text = "데이터를 불러 오는중 입니다.";
+        Rank2UI.text = "데이터를 불러 오는중 입니다.";
+        Rank3UI.text = "데이터를 불러 오는중 입니다.";
+
+        // 데이터베이스에 접근
+        DatabaseReference reference;
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://rhythmgame-tutorial.firebaseio.com/");
+        reference = FirebaseDatabase.DefaultInstance.GetReference("ranks").Child(PlayerInformation.selectedMusic);
+
+        // 모든 데이터를 Json형태로 가져옵니다.
+        reference.OrderByChild("score").GetValueAsync().ContinueWith // OrderByChild로 내림차순으로 데이터를 가져온다.
+        (
+            task =>
+            {
+                // 성공적으로 데이터를 가져왔다면.
+                if(task.IsCompleted)
+                {
+                    List<string> rankList = new List<string>();
+                    List<string> emailList = new List<string>();
+                    DataSnapshot snapshot = task.Result;
+
+                    // Json데이터의 각 원소에 접근.
+                    foreach(DataSnapshot data in snapshot.Children)
+                    {
+                        IDictionary rank = (IDictionary)data.Value;
+                        emailList.Add(rank["email"].ToString());
+                        rankList.Add(rank["score"].ToString());
+                    }
+
+                    //내림차순으로 정렬된 데이터를 뒤집어준다.
+                    emailList.Reverse();
+                    rankList.Reverse();
+
+                    // Top 3의 데이터를 출력.
+                    Rank1UI.text = "플레이 한 사용자가 없습니다.";
+                    Rank2UI.text = "플레이 한 사용자가 없습니다.";
+                    Rank3UI.text = "플레이 한 사용자가 없습니다.";
+                    List<Text> textList = new List<Text>();
+                    textList.Add(Rank1UI);
+                    textList.Add(Rank2UI);
+                    textList.Add(Rank3UI);
+                    for(int i = 0; i < textList.Count; ++i)
+                    {
+                        textList[i].text = (i + 1) + "위: " + emailList[i] + "님, (" + rankList[i] + "점)";
+                    }
+                }
+            }            
+        );
+
     }
 
     public void Replay()
