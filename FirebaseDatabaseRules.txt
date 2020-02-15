@@ -1,6 +1,18 @@
 {
   "rules": 
   {
+    "charges":
+    {
+      "$music":
+      {
+        ".read":
+        	true,
+          "$userId":
+          {
+            ".write": "$userId === auth.uid"
+          }
+      }
+    },
     "ranks":
     {
       "$music":

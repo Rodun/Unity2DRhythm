@@ -55,9 +55,8 @@ public class GameResultManager : MonoBehaviour
         Rank3UI.text = "데이터를 불러 오는중 입니다.";
 
         // 데이터베이스에 접근
-        DatabaseReference reference;
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://rhythmgame-tutorial.firebaseio.com/");
-        reference = FirebaseDatabase.DefaultInstance.GetReference("ranks").Child(PlayerInformation.selectedMusic);
+        DatabaseReference reference = PlayerInformation.GetDatabaseReference()
+            .Child("ranks").Child(PlayerInformation.selectedMusic);
 
         // 모든 데이터를 Json형태로 가져옵니다.
         reference.OrderByChild("score").GetValueAsync().ContinueWith // OrderByChild로 내림차순으로 데이터를 가져온다.
