@@ -1,0 +1,18 @@
+{
+  "rules": 
+  {
+    "ranks":
+    {
+      "$music":
+      {
+        ".read":
+        	true,
+          "$userId":
+          {
+            ".write": "$userId === auth.uid && (!data.hasChild('score') || data.child('score').val() < newData.child('score').val())"
+          }
+      }
+    }
+    
+  }
+}

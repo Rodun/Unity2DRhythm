@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 
 public class NoteController : MonoBehaviour
 {
@@ -107,9 +110,44 @@ public class NoteController : MonoBehaviour
         PlayerInformation.score = GameManager.instance.score;
         PlayerInformation.musicTitle = musicTitle;
         PlayerInformation.musicArtist = musicArtist;
-
+        AddRank();
         SceneManager.LoadScene("GameResultScene");
     }
+
+    // 순위 정보를 담는 Rank 클래스 : 클래스를 Json으로 변환하여 저장
+    class Rank
+    {
+        public string email;
+        public int score;
+        public double timestamp;
+
+        public Rank(string _email, int _score, double _timestamp)
+        {
+            this.email = _email;
+            this.score = _score;
+            this.timestamp = _timestamp;
+        }
+    }
+
+    void AddRank()
+    {
+        // 데이터베이스에 접속 설정하기
+        DatabaseReference reference;
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://rhythmgame-tutorial.firebaseio.com/");
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+
+        // 삽입할 데이터 준비
+        DateTime now = DateTime.Now.ToLocalTime();
+        TimeSpan span = (now - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime());
+        int timestamp = (int)span.TotalSeconds;
+        Rank rank = new Rank(PlayerInformation.auth.CurrentUser.Email, (int)PlayerInformation.score, timestamp);
+        string json = JsonUtility.ToJson(rank);
+
+        // 랭킹 점수 데이터 삽입하기
+        reference.Child("ranks").Child(PlayerInformation.selectedMusic).Child(PlayerInformation.auth.CurrentUser.UserId).SetRawJsonValueAsync(json);            
+    }
+
+
 
     // Update is called once per frame
     void Update()
