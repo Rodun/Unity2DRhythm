@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "642957513889",
+    "firebase_url": "https://rhythmgame-tutorial.firebaseio.com",
+    "project_id": "rhythmgame-tutorial",
+    "storage_bucket": "rhythmgame-tutorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642957513889:android:302b2e5b0ac5d812d18ce0",
+        "android_client_info": {
+          "package_name": "com.rodun.unityrhythmgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642957513889-hetdn741qa7bvb9aotm8fsrsfue2o2ao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTFbjH7Oovei6kg-NGpdsIzIXqszFZImY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642957513889-hetdn741qa7bvb9aotm8fsrsfue2o2ao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
