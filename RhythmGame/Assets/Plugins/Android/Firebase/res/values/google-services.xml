@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="firebase_database_url" translatable="false">https://rhythmgame-tutorial.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">642957513889</string>
+  <string name="google_storage_bucket" translatable="false">rhythmgame-tutorial.appspot.com</string>
+  <string name="project_id" translatable="false">rhythmgame-tutorial</string>
+  <string name="google_api_key" translatable="false">AIzaSyCTFbjH7Oovei6kg-NGpdsIzIXqszFZImY</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCTFbjH7Oovei6kg-NGpdsIzIXqszFZImY</string>
+  <string name="google_app_id" translatable="false">1:642957513889:android:302b2e5b0ac5d812d18ce0</string>
+  <string name="default_web_client_id" translatable="false">642957513889-hetdn741qa7bvb9aotm8fsrsfue2o2ao.apps.googleusercontent.com</string>
+</resources>
