@@ -48,7 +48,7 @@ public class SongSelectManager : MonoBehaviour, IStoreListener
         audioSource.Stop();
 
         //리소스에서 비트(Beat) 텍스트 파일을 불러옵니다.
-        TextAsset textAsset = Resources.Load<TextAsset>("Beats/" + musicIndex.ToString());
+        TextAsset textAsset = textAssets[musicIndex - 1];
         StringReader stringReader = new StringReader(textAsset.text);
                 
         musicTitleUI.text = stringReader.ReadLine(); // 첫 번째 줄에 적힌 곡 이름을 읽어서 UI를 업데이트 합니다.
@@ -56,11 +56,11 @@ public class SongSelectManager : MonoBehaviour, IStoreListener
         bpmUI.text = "BPM: " + stringReader.ReadLine().Split(' ')[0]; // 세 번째 줄에 첫번째로 적힌 bpm을 읽어온다.
 
         // 리소스에서 비트(beat) 음악 파일을 불러와 재생합니다.
-        AudioClip audioClip = Resources.Load<AudioClip>("Beats/" + musicIndex.ToString());
+        AudioClip audioClip = audioClips[musicIndex - 1];
         audioSource.clip = audioClip;
         audioSource.Play();
                 
-        musicImageUI.sprite = Resources.Load<Sprite>("Beats/" + musicIndex.ToString()); // 리소스에서 비트(beat) 이미지 파일을 불러옵니다.
+        musicImageUI.sprite = sprites[musicIndex - 1]; // 리소스에서 비트(beat) 이미지 파일을 불러옵니다.
 
         // 데이터베이스에 접근.
         DatabaseReference reference;
@@ -150,8 +150,24 @@ public class SongSelectManager : MonoBehaviour, IStoreListener
         UpdateSong(musicIndex);
     }
 
+    Sprite[] sprites;
+    AudioClip[] audioClips;
+    TextAsset[] textAssets;
+
     void Start()
     {
+        sprites = new Sprite[musicCount];
+        audioClips = new AudioClip[musicCount];
+        textAssets = new TextAsset[musicCount];
+
+        // 모든 곡의 정보를 미리 읽습니다.
+        for(int i = 1; i <=musicCount; ++i)
+        {
+            sprites[i - 1] = Resources.Load<Sprite>("Beats/" + i.ToString());
+            audioClips[i - 1] = Resources.Load<AudioClip>("Beats/" + i.ToString());
+            textAssets[i - 1] = Resources.Load<TextAsset>("Beats/" + i.ToString());
+        }
+
         userUI.text = PlayerInformation.auth.CurrentUser.Email + "님 환영합니다.";
         musicIndex = 1;
         UpdateSong(musicIndex);

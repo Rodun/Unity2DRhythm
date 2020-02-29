@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Github/Rodun/Unity2DRhythm/RhythmGame/RhythmGame_Tutorial.aab
+D:/Github/Rodun/Unity2DRhythm/RhythmGame/RhythmGame_Tutorial0_5.aab
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/JoinScene.unity
@@ -8,6 +8,9 @@ Assets/Scenes/SongSelectScene.unity
 Assets/Scenes/GameScene.unity
 Assets/Scenes/GameResultScene.unity
 SceneListEnd?
+71bb6a6b6c8f052f948db64c7dd3ca4f Stores.dll:UnityEngine.Purchasing.AsyncWebUtil
+71bb6a6b6c8f052f948db64c7dd3ca4f Stores.dll:UnityEngine.Purchasing.MoolahStoreImpl
+71bb6a6b6c8f052f948db64c7dd3ca4f Stores.dll:UnityEngine.Purchasing.Extension.UnityUtil
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 1bb385487b95a3e41435f63c93a55dc2 Assembly-CSharp.dll:.ObjectPooler
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -23,7 +26,9 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+ebd0fcfecda45cfd91320c470f790625 Assembly-CSharp-firstpass.dll:.IAPDemoProductUI
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
+5a8eb80d10da046d62c8bb0c5ea818c8 Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.IAPButton
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -57,6 +62,9 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 b31ef1c110c5a7ed74ad67be3ae59038 Unity.TextMeshPro.dll:TMPro.TMP_InputField
+6adf0680d8d7e110dab1c5470b12851b Editor.dll:UnityEditor.Purchasing.ObfuscatorWindow
+6adf0680d8d7e110dab1c5470b12851b Editor.dll:UnityEditor.Purchasing.ProductCatalogEditor
+6adf0680d8d7e110dab1c5470b12851b Editor.dll:UnityEditor.Purchasing.RichEditorWindow
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -102,6 +110,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+88db12bec296072be6ab433706055d61 Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.IAPListener
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -118,8 +127,9 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.DemoInventory
 390cd1ff7473337096513f6ab4215515 Assembly-CSharp.dll:.SongSelectManager
-aeea41a4e23a4471ef2962942818e0dc Assembly-CSharp.dll:.GameManager
+7440fa521ffc4201a7b0630d0e5bfad4 Assembly-CSharp.dll:.GameManager
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
@@ -130,6 +140,9 @@ ca79be67c958ab44077556142f0e89de Assembly-CSharp.dll:.NoteBehavior
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
+cbe9b39ad540c96208a018691ff0bdfa UDP.dll:UnityEngine.UDP.AppStoreSettings
+71bb6a6b6c8f052f948db64c7dd3ca4f UDP.dll:UnityEngine.UDP.MainThreadDispatcher
+71bb6a6b6c8f052f948db64c7dd3ca4f UDP.dll:UnityEngine.UDP.UdpGameManager
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -170,17 +183,4 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 e38ffd2fd670ebb8ca5d1fa17a29925d Assembly-CSharp.dll:.JoinManager
-cbe9b39ad540c96208a018691ff0bdfa UDP.dll:UnityEngine.UDP.AppStoreSettings
-71bb6a6b6c8f052f948db64c7dd3ca4f UDP.dll:UnityEngine.UDP.MainThreadDispatcher
-71bb6a6b6c8f052f948db64c7dd3ca4f UDP.dll:UnityEngine.UDP.UdpGameManager
-71bb6a6b6c8f052f948db64c7dd3ca4f Stores.dll:UnityEngine.Purchasing.AsyncWebUtil
-71bb6a6b6c8f052f948db64c7dd3ca4f Stores.dll:UnityEngine.Purchasing.MoolahStoreImpl
-71bb6a6b6c8f052f948db64c7dd3ca4f Stores.dll:UnityEngine.Purchasing.Extension.UnityUtil
-6adf0680d8d7e110dab1c5470b12851b Editor.dll:UnityEditor.Purchasing.ObfuscatorWindow
-6adf0680d8d7e110dab1c5470b12851b Editor.dll:UnityEditor.Purchasing.ProductCatalogEditor
-6adf0680d8d7e110dab1c5470b12851b Editor.dll:UnityEditor.Purchasing.RichEditorWindow
-ebd0fcfecda45cfd91320c470f790625 Assembly-CSharp-firstpass.dll:.IAPDemoProductUI
-5a8eb80d10da046d62c8bb0c5ea818c8 Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.IAPButton
-88db12bec296072be6ab433706055d61 Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.IAPListener
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.DemoInventory
 08a4dc90eb8d405328ffd2b674587aba Assembly-CSharp-firstpass.dll:.IAPDemo

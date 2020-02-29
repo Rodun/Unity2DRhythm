@@ -40,6 +40,15 @@ public class NoteBehavior : MonoBehaviour
         }
     }
 
+    public void Judge()
+    {
+        //해당 노트에 대한 판정
+        GameManager.instance.processJudge(judge, noteType);
+        //노트가 판정 선에 닿기 시작한 이후로는 해당 노트를 제거합니다.
+        if (judge != GameManager.judges.NONE)
+            gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Bad Line")

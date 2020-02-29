@@ -1341,6 +1341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722841446}
   - component: {fileID: 722841447}
+  - component: {fileID: 722841448}
   m_Layer: 0
   m_Name: Trail 4
   m_TagString: Untagged
@@ -1410,6 +1411,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &722841448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722841445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &807750541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,6 +1434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807750542}
   - component: {fileID: 807750543}
+  - component: {fileID: 807750544}
   m_Layer: 0
   m_Name: Trail 1
   m_TagString: Untagged
@@ -1489,6 +1504,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &807750544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807750541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &938487058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938487059}
   - component: {fileID: 938487060}
+  - component: {fileID: 938487061}
   m_Layer: 0
   m_Name: Trail 2
   m_TagString: Untagged
@@ -1568,6 +1597,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &938487061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938487058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &981614025
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,6 +6818,7 @@ MonoBehaviour:
   - {fileID: 1186053765}
   - {fileID: 722841445}
   autoPerfect: 1
+  noteObjectPooler: {fileID: 1113442974}
 --- !u!4 &1134907861
 Transform:
   m_ObjectHideFlags: 0
@@ -6896,6 +6939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186053766}
   - component: {fileID: 1186053767}
+  - component: {fileID: 1186053768}
   m_Layer: 0
   m_Name: Trail 3
   m_TagString: Untagged
@@ -6965,6 +7009,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1186053768
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186053765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1284248307
 GameObject:
   m_ObjectHideFlags: 0
